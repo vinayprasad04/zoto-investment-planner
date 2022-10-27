@@ -4,7 +4,8 @@ import WebRoot from './app/js/webRoot';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './app/styles/common/main.scss'
+import './app/styles/common/main.scss';
+import './app/styles/common/account.scss';
 
 ReactDOM.render(<WebRoot/>, document.getElementById('root'));
 
