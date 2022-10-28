@@ -23,7 +23,7 @@ function WebRoot() {
                     <Route path="/mix-planner"><Counter/></Route>
                     <Route path="/home"><Home/></Route>
                     
-                    <Route path="/account"><Account/></Route>
+                    <Route path="/acount"><Account/></Route>
                 </Switch>
         </Router>
     );
