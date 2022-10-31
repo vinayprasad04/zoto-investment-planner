@@ -6,19 +6,21 @@ import { Outlet } from 'react-router-dom';
 const Account = () => {
     return (
         <>
-            <div className="container">
+            <div className="account">
                 <div className="breadcrums">
                     <Link className='breadcrums_link'>Home <FaGreaterThan className='breadcrums_link_icon' /></Link> <span>Account</span>
                 </div>
                 <div className="innerContainer">
                     <section className="accHead group">
                         <h1>Account & Settings</h1>
-                        <Link to="/" className='secondary_btn_red small_btn manageBtn'>Manage</Link>
-                        <div className="veiwFor">
-                            <span>Veiw for</span>
-                            <select name="" id="">
-                                <option value="">Nitin Garg</option>
-                            </select>
+                        <div className='viewContainer'>
+                            <div className="veiwFor">
+                                <span>Veiw for</span>
+                                <select name="" id="">
+                                    <option value="">Nitin Garg</option>
+                                </select>
+                            </div>
+                            <Link to="" className='secondary_btn_red small_btn manageBtn'>Manage</Link>
                         </div>
                     </section>
                     <div className="group">
