@@ -94,16 +94,63 @@
         }
     }
 
-    .accountSidebarNav {
-        width: 293px;
-        float: left;
-        border-right: #dfeef5 solid 1px;
+}
+
+.accountSidebarNav {
+    width: 293px;
+    float: left;
+    border-right: #dfeef5 solid 1px;
+
+    ul {
+
+        li {
+            list-style: none;
+            border-bottom: #dfeef5 solid 1px;
+
+            .linkImg {
+                text-transform: uppercase;
+                font-size: 12px;
+                display: block;
+                height: 54px;
+                line-height: 54px;
+                padding-left: 66px;
+                font-weight: 600;
+                border-left: transparent solid 5px;
+                letter-spacing: 0.9px;
+                color: #96a9bb;
+                text-decoration: none;
+                background-image: url(../../../images/profileLinkIcon.png);
+                background-repeat: no-repeat;
+                background-position: 25px -42px;
+            }
+
+            .profileLink {
+                background-position: 25px 20px;
+            }
+
+            .currentHoldLink {
+                background-position: 25px -163px;
+            }
+
+            .transactionLink {
+                background-position: 25px -233px;
+            }
+
+            .inboxLink {
+                background-position: 25px -100px;
+            }
+
+            .settingsLink {
+                background-position: 25px -304px;
+            }
+        }
     }
 
-    .accContent {
-        width: 848px;
-        border-left: #dfeef5 solid 1px;
-        margin-left: -1px;
-        float: left;
-    }
+}
+
+.accContent {
+    width: 848px;
+    border-left: #dfeef5 solid 1px;
+    margin-left: -1px;
+    float: left;
 }

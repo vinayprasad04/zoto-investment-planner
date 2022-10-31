@@ -1,42 +1,9 @@
 import { Link } from 'react-router-dom';
-import "../../styles/common/account.scss";
+import "../../../styles/common/account.scss";
 import { FaGreaterThan } from "react-icons/fa";
-// import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-// import Overview from './Overview';
-// import Profile from './Profile';
-// import Setting from './Setting';
-// import Transactions from './Transactions';
-// import Inbox from './Inbox';
-// import CurrentHolding from './CurrentHolding';
+import { Outlet } from 'react-router-dom';
 
 const Account = () => {
-    const headItem = [
-        {
-            path: "/",
-            name: "",
-            icon: ""
-        }, {
-            path: "/",
-            name: "",
-            icon: ""
-        }, {
-            path: "/",
-            name: "",
-            icon: ""
-        }, {
-            path: "/",
-            name: "",
-            icon: ""
-        }, {
-            path: "/",
-            name: "",
-            icon: ""
-        }, {
-            path: "/",
-            name: "",
-            icon: ""
-        }
-    ];
     return (
         <>
             <div className="container">
@@ -56,12 +23,19 @@ const Account = () => {
                     </section>
                     <div className="group">
                         <aside className="accountSidebarNav">
-
+                            <ul>
+                                <li><Link to="/account/overview" className='linkImg overviewLink'>Overview</Link></li>
+                                <li><Link to="/account/profile" className='linkImg profileLink '>PROFILE</Link></li>
+                                <li><Link to="/account/currentholdings" className='linkImg currentHoldLink'>CURRENT HOLDINGS</Link></li>
+                                <li><Link to="/account/transactions" className='linkImg transactionLink'>TRANSACTIONS</Link></li>
+                                <li><Link to="/account/inbox" className='linkImg inboxLink'>INBOX</Link></li>
+                                <li><Link to="/account/setting" className='linkImg settingsLink'>SETTING</Link></li>
+                            </ul>
                         </aside>
+                        <section className="accContent">
+                            <Outlet />
+                        </section>
                     </div>
-                    <section className="accContent">
-
-                    </section>
                 </div>
             </div>
         </>
