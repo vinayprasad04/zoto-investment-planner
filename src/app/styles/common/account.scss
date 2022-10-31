@@ -1,1 +1,109 @@
+.container {
+    width: 1140px;
+    margin: 0 auto;
 
+    .breadcrums {
+        padding: 24px 0;
+        font-size: 14px;
+
+        &_link {
+            color: #96a9bb;
+
+            &_icon {
+                font-size: 10px;
+            }
+        }
+
+        span {
+            color: #000;
+        }
+    }
+
+    .innerContainer {
+        margin-bottom: 70px;
+        background-color: #ffffff;
+        border-radius: 5px;
+
+        .accHead {
+            padding: 24px 30px;
+            border-bottom: #dfeef5 solid 1px;
+
+            h1 {
+                font-size: 20px;
+                font-weight: 600;
+                color: #001837;
+                float: left;
+            }
+
+            .secondary_btn_red.small_btn,
+            .alternate_btn.small_btn {
+                padding: 5px 14px 6px;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+
+            .manageBtn {
+                float: right;
+            }
+
+            .veiwFor {
+                float: right;
+                margin-right: 10px;
+
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: right;
+                    color: #001837;
+                    padding-right: 10px;
+                }
+
+                select {
+                    width: 160px;
+                    padding: 5px 10px;
+                    background-color: #ffffff;
+                    border: solid 1px #dfeef5;
+                    font-size: 14px;
+                    font-weight: 400;
+                    background-image: url(../../../images/dd-arrow.png);
+                    background-repeat: no-repeat;
+                    background-position: right center;
+                    color: #5c6b7e;
+                    border-radius: 6px;
+                    -moz-border-radius: 6px;
+                    -webkit-border-radius: 6px;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                }
+            }
+        }
+
+        .group {
+            zoom: 1;
+
+            &:before {
+                content: "";
+                display: table;
+            }
+
+            &:after {
+                clear: both;
+            }
+        }
+    }
+
+    .accountSidebarNav {
+        width: 293px;
+        float: left;
+        border-right: #dfeef5 solid 1px;
+    }
+
+    .accContent {
+        width: 848px;
+        border-left: #dfeef5 solid 1px;
+        margin-left: -1px;
+        float: left;
+    }
+}
