@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../../styles/common/profile.scss"
-import {data} from './profileData'
+import {data} from '../../components/Header/constant'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 const Profile = () => {
@@ -14,21 +14,24 @@ const Profile = () => {
           <li><a href="#">DOCUMENTS</a></li>
         </ul>
       </nav>
-      <span className="container profile-text">
+      <span className="container profile-text ">
         Manage your Account Details securely
       </span>
+      
       <div className="container profile-cart">
-      <Card className="text-center">
-      <Card.Header>{data[0].title}</Card.Header>
-      <Card.Body>
+        {data.map((item,index)=>(
+            <Card className="text">
+      <Card.Header className="cart-title" >{item.title}</Card.Header>
+      <Card.Body style={{borderBottom:"1px solid gray"}}>
         
-        <Card.Text>
-          {data[0].descripition}
+        <Card.Text  style={{opacity: ".8",padding:"5px",height:"150px"}}>
+          {item.descripition}
         </Card.Text>
       
       </Card.Body>
-      <Card.Footer className="text-muted"><Button variant="primary">Go somewhere</Button></Card.Footer>
+ <button className="profile-btn"   style={{marginTop:"10px",marginBottom:"10px"}}>Add Details</button>
     </Card>
+        ))}
       </div>
     </div>
   );
