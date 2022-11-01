@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import "../../../styles/common/account.scss";
 import { FaGreaterThan } from "react-icons/fa";
-import { Outlet } from 'react-router-dom';
+
 
 const Account = () => {
     return (
@@ -35,7 +35,7 @@ const Account = () => {
                             </ul>
                         </aside>
                         <section className="accContent">
-                            <Outlet />
+                         <Outlet/>
                         </section>
                     </div>
                 </div>
