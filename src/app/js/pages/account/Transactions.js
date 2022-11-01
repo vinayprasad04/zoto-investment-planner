@@ -1,9 +1,10 @@
+import Tab from '../../components/Transiction_tab/Tab'
 import React from 'react'
 
 const Transactions = () => {
     return (
         <>
-            <h1>TRANSACTIONS</h1>
+            <Tab/>
         </>
     )
 }
