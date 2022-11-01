@@ -10,25 +10,27 @@
         background-color: #f9fcfd;
         border-bottom: 1px solid #dfeef5;
 
-        a {
-            .backtoTrans {
-                display: inline-block;
-                padding-left: 20px;
-                background-image: url(../../../images/arrow-left-blue.svg);
-                background-repeat: no-repeat;
-                background-position: left 2px;
-                font-size: 12px;
-                margin: 20px 0 0 30px;
-                font-weight: 600;
-                color: #1f6dd1;
-                text-decoration: none;
-            }
+        .backtoTrans {
+            display: inline-block;
+            padding-left: 20px;
+            background-image: url(../../../images/arrow-left-blue.svg);
+            background-repeat: no-repeat;
+            background-position: left 2px;
+            font-size: 12px;
+            margin: 20px 0 0 30px;
+            font-weight: 600;
+            color: #1f6dd1;
+            text-decoration: none;
         }
 
         .updateNowBtn {
             position: absolute;
             right: 30px;
             top: 18px;
+
+            :hover {
+                color: #216ccd;
+            }
         }
     }
 
@@ -85,6 +87,22 @@
                 tr {
                     .text-right {
                         text-align: right;
+                        .secondary_btn_red:hover {
+                            background-color: #f8342d;
+                            color: #ffffff;
+                            border-color: #f8342d;
+                        }
+
+                        .secondary_btn_red.small_btn,
+                        .alternate_btn.small_btn {
+                            padding: 5px 14px 6px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+
+                            
+                        }
+                        
                     }
 
                     td {
@@ -95,20 +113,97 @@
                         color: #96a9bb;
                         padding: 20px;
 
+                        .completedBarBox {
+                            position: relative;
+                            height: 1px;
+
+                            .halfWidth {
+                                width: 25%;
+                            }
+
+                            .completeBarLine {
+                                position: absolute;
+                                top: 1px;
+                                height: 4px;
+                                background-color: #15c442;
+                            }
+
+                            .fullWidth {
+                                width: 75%;
+                            }
+                        }
+
+                        .statusInfo {
+                            border-top: #e9edf1 solid 4px;
+
+                            .complete_status {
+                                color: #5c6b7e;
+
+                                ::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: -1px;
+                                    left: 50%;
+                                    margin-left: -5px;
+                                    display: block;
+                                    width: 0;
+                                    height: 0;
+                                    border-top: 7px solid #15c442;
+                                    border-right: 5px solid transparent;
+                                    border-left: 5px solid transparent;
+                                }
+
+                                &_title {
+                                    font-weight: 600;
+                                    color: #001837;
+                                }
+
+                                span {
+                                    font-weight: 500;
+                                    color: #001837;
+                                }
+
+                                strong {
+                                    color: #1f6dd1;
+                                }
+                            }
+
+                            li {
+                                list-style: none;
+                                width: 25%;
+                                float: left;
+                                padding-top: 15px;
+                                padding-right: 10px;
+                                font-size: 13px;
+                                font-weight: 400;
+                                letter-spacing: -0.2px;
+                                color: #bac7cc;
+                                position: relative;
+
+
+                            }
+                        }
+
+
                         .productInfo {
                             font-size: 18px;
                             font-weight: 600;
                             color: #001837;
+
+                            span {
+                                font-size: 14px;
+                                font-weight: 400;
+                            }
                         }
 
                         a.secondary_btn_red {
                             border-radius: 15px;
                             -moz-border-radius: 15px;
                             -webkit-border-radius: 15px;
-                            
+
                         }
-                        
-                        
+
+
 
                         span.rowTitle {
                             font-size: 12px;
@@ -117,7 +212,7 @@
                             text-transform: uppercase;
                         }
                     }
-                    
+
 
                     th {
                         background-color: #f1f8fa;
@@ -133,5 +228,68 @@
             }
         }
 
+    }
+}
+
+.relationManagerPic {
+    width: 42px;
+    float: left;
+    margin-right: 20px;
+
+    img {
+        .relationManagerPic img {
+            width: 100%;
+            border-radius: 100%;
+            -moz-border-radius: 100%;
+            -webkit-border-radius: 100%;
+        }
+    }
+}
+
+.relMangInfo {
+    font-size: 16px;
+    font-weight: 400;
+    color: #001837;
+    width: 220px;
+    float: left;
+
+    span {
+        font-size: 13px;
+        color: #96a9bb;
+
+        em {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            width: 29px;
+            font-style: normal;
+            margin-right: 2px;
+            padding: 2px 0;
+            background-color: #5bdb7c;
+            display: inline-block;
+            text-align: center;
+            border-radius: 8px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+        }
+    }
+}
+
+.messageLink {
+    float: left;
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #1f6dd1;
+        line-height: 21px;
+        padding-left: 25px;
+        background-image: url(../../../images/messageIcon.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        display: inline-block;
     }
 }

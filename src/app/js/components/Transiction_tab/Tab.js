@@ -32,7 +32,7 @@ function Tab() {
             </ul>
 
             <div className="updateNowBtn">
-              <a href="#">Updated Just now</a>
+              <Link to="#">Updated Just now</Link>
             </div>
           </div>
 
@@ -57,7 +57,7 @@ function Tab() {
                       </td>
                       <td>Payment Recieved</td>
                       <td>
-                        <a href='#'onClick={() => showtrans(false)}>Details</a>
+                        <Link to='#'onClick={() => showtrans(false)}>Details</Link>
                       </td>
                     </tr>
                     <tr>
@@ -68,7 +68,7 @@ function Tab() {
                       </td>
                       <td>Verifying Documents</td>
                       <td>
-                      <a href='#'onClick={() => showtrans(false)}>Details</a>
+                      <Link to='#'onClick={() => showtrans(false)}>Details</Link>
                       </td>
                     </tr>
                     <tr>
@@ -79,7 +79,7 @@ function Tab() {
                       </td>
                       <td>Cancelled</td>
                       <td>
-                      <a href='#'onClick={() => showtrans(false)}>Details</a>
+                      <Link to='#'onClick={() => showtrans(false)}>Details</Link>
                       </td>
                     </tr>
                   </tbody>

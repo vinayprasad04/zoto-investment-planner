@@ -1,18 +1,24 @@
 import React from "react";
-import "../../../styles/common/detail.scss"
+import "../../../styles/common/detail.scss";
+import relaManger from "../../../../images/relaManger.png";
+import {Link} from "react-router-dom"
 
-function Detail({showtrans}) {
+function Detail({ showtrans }) {
   return (
     <section class="accContent">
       <div class="trasactionHead group">
-        <a onClick={()=>{
-            showtrans(true)
-        }} href="javascript:void(0);" class="backtoTrans">
+        <Link
+          onClick={() => {
+            showtrans(true);
+          }}
+          to="#"
+          class="backtoTrans"
+        >
           BACK TO TRANSACTIONS
-        </a>
+        </Link>
 
         <div class="updateNowBtn">
-          <a href="javascript:void(0);">Updated Just now</a>
+          <Link to="#">Updated Just now</Link>
         </div>
       </div>
 
@@ -53,12 +59,12 @@ function Detail({showtrans}) {
                   </div>
                 </td>
                 <td class="text-right">
-                  <a
-                    href="javascript:void(0);"
+                  <Link
+                    to="#"
                     class="secondary_btn_red small_btn cancelTransBtn"
                   >
                     CANCEL
-                  </a>
+                  </Link>
                 </td>
               </tr>
 
@@ -68,32 +74,38 @@ function Detail({showtrans}) {
                 </td>
                 <td colspan="2">
                   <div class="completedBarBox">
-                    <div class="completeBarLine"></div>
+                    <div class="completeBarLine halfWidth"></div>
                   </div>
                   <ul class="statusInfo group">
                     <li class="complete_status">
-                      <strong>Request Status</strong>
+                      <strong className="complete_status_title">
+                        Request Status
+                      </strong>
                       <br />
                       <span>Recieved</span>
                       <br />
                       Estimated 24th May
                     </li>
                     <li>
-                      <strong>Documents</strong>
+                      <strong className="complete_status_title">
+                        Documents
+                      </strong>
                       <br />
                       <span>Upcoming</span>
                       <br />
                       Estimated 24th May
                     </li>
                     <li>
-                      <strong>Payment</strong>
+                      <strong className="complete_status_title">Payment</strong>
                       <br />
                       <span>Upcoming</span>
                       <br />
                       Estimated 24th May
                     </li>
                     <li>
-                      <strong>Purchase</strong>
+                      <strong className="complete_status_title">
+                        Purchase
+                      </strong>
                       <br />
                       <span>Upcoming</span>
                       <br />
@@ -109,7 +121,7 @@ function Detail({showtrans}) {
                 </td>
                 <td colspan="2">
                   <div class="relationManagerPic">
-                    <img src="images/relaManger.png" />
+                    <img src={relaManger} />
                   </div>
                   <div class="relMangInfo">
                     Nitish Rathi <br />
@@ -119,8 +131,8 @@ function Detail({showtrans}) {
                   </div>
 
                   <div class="messageLink">
-                    <a href="javascript:void(0);">SEND A MESSAGE</a>
-                  </div>
+                    <Link to="#">SEND A MESSAGE</Link>
+               </div>
                 </td>
               </tr>
 
@@ -128,7 +140,7 @@ function Detail({showtrans}) {
                 <td width="20%"></td>
                 <td colspan="2">
                   Need help with anything? Reach us on{" "}
-                  <a href="javascript:void(0);">support@prosperx.com</a>
+                  <Link to="#">support@prosperx.com</Link>
                 </td>
               </tr>
             </tbody>
@@ -160,9 +172,9 @@ function Detail({showtrans}) {
                   </div>
                 </td>
                 <td class="text-right">
-                  <a href="javascript:void(0);" class="cancelBtn disable">
+                  <Link to="#" class="cancelBtn disable">
                     CANCEL
-                  </a>
+                  </Link>
                 </td>
               </tr>
 
@@ -172,32 +184,38 @@ function Detail({showtrans}) {
                 </td>
                 <td colspan="2">
                   <div class="completedBarBox">
-                    <div class="completeBarLine"></div>
+                    <div class="completeBarLine fullWidth"></div>
                   </div>
                   <ul class="statusInfo group">
                     <li>
-                      <strong>Request Status</strong>
+                      <strong className="complete_status_title">
+                        Request Status
+                      </strong>
                       <br />
                       <span>Recieved</span>
                       <br />
                       Estimated 24th May
                     </li>
                     <li>
-                      <strong>Documents</strong>
+                      <strong className="complete_status_title">
+                        Documents
+                      </strong>
                       <br />
                       <span>Upcoming</span>
                       <br />
                       Estimated 24th May
                     </li>
                     <li class="complete_status">
-                      <strong>Payment</strong>
+                      <strong className="complete_status_title">Payment</strong>
                       <br />
                       <span>Upcoming</span>
                       <br />
                       Estimated 24th May
                     </li>
                     <li>
-                      <strong>Purchase</strong>
+                      <strong className="complete_status_title">
+                        Purchase
+                      </strong>
                       <br />
                       <span>Upcoming</span>
                       <br />
@@ -213,7 +231,7 @@ function Detail({showtrans}) {
                 </td>
                 <td colspan="2">
                   <div class="relationManagerPic">
-                    <img src="images/relaManger.png" />
+                    <img src={relaManger} />
                   </div>
                   <div class="relMangInfo">
                     Akshit Kumar <br />
@@ -223,7 +241,7 @@ function Detail({showtrans}) {
                   </div>
 
                   <div class="messageLink">
-                    <a href="javascript:void(0);">2 MESSAGES</a>
+                    <Link href="#">2 MESSAGES</Link>
                   </div>
                 </td>
               </tr>
@@ -232,7 +250,7 @@ function Detail({showtrans}) {
                 <td width="20%"></td>
                 <td colspan="2">
                   Need help with anything? Reach us on{" "}
-                  <a href="javascript:void(0);">support@prosperx.com</a>
+                  <Link to="#">support@prosperx.com</Link>
                 </td>
               </tr>
             </tbody>
