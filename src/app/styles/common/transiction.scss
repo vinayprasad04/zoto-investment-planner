@@ -1,0 +1,139 @@
+.accContent {
+    width: 848px;
+    border-left: #dfeef5 solid 1px;
+    margin-left: -1px;
+    float: left;
+
+    .trasactionHead {
+        height: 55px;
+        position: relative;
+        background-color: #f9fcfd;
+        border-bottom: 1px solid #dfeef5;
+
+        .accountTabsNav {
+            background-color: #f9fcfd;
+            border-bottom: #dfeef5 solid 1px;
+            padding: 0 15px;
+
+            li {
+                list-style: none;
+                float: left;
+                padding: 0 15px;
+
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    display: block;
+                    line-height: 54px;
+                    height: 54px;
+                    color: #96a9bb;
+                    border-bottom: transparent solid 2px;
+
+                    a.active {
+                        border-color: transparent;
+                        color: #1f6dd1;
+                    }
+                }
+            }
+        }
+        .updateNowBtn {
+            position: absolute;
+            right: 30px;
+            top: 18px;
+
+            a {
+                color: #bac7cc;
+                text-decoration: none;
+                display: inline-block;
+                padding-right: 25px;
+                background-image: url(../../../images/refreshIcon.png);
+                background-repeat: no-repeat;
+                background-position: right center;
+            }
+        }
+    }
+
+    .tabContainer {
+        padding: 25px 30px;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #001837;
+            margin-bottom: 30px;
+        }
+
+        .tabContent {
+           
+
+            .transactionTable {
+
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    padding: 0px;
+                    border: none;
+                    table-layout: fixed;
+                    width: 100%;
+
+                    tr {
+                        th:first-child {
+                        border-radius: 7px 0 0 0;
+                        -moz-border-radius: 7px 0 0 0;
+                        -webkit-border-radius: 7px 0 0 0;
+                        border-left: #dfeef5 solid 1px;
+
+
+                        }
+                         th {
+                            background-color: #f1f8fa;
+                            border-bottom: #dfeef5 solid 1px;
+                            border-top: #dfeef5 solid 1px;
+                            font-size: 12px;
+                            font-weight: 600;
+                            color: #5c6b7e;
+                            text-transform: uppercase;
+                            padding: 15px 0 15px 20px;
+                            text-align: left;
+                        }
+
+                        th:last-child {
+                            border-radius: 0 7px 0 0;
+                            -moz-border-radius: 0 7px 0 0;
+                            -webkit-border-radius: 0 7px 0 0;
+                            border-right: #dfeef5 solid 1px;
+                        }
+
+
+                        td {
+                            border: #dfeef5 solid 1px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 1.29;
+                            color: #96a9bb;
+                            padding: 20px 0 20px 20px;
+
+                            a {
+                                text-decoration: none;
+                                font-size: 12px;
+                                color: #f8342d;
+                            }
+
+                            strong {
+                                font-weight: 600;
+                                color: #001837;
+                            }
+                        }
+                    
+                    }
+                    
+                   
+                }
+            }
+        }
+    }
+
+    .group {
+        zoom: 1;
+    }
+}

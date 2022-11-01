@@ -1,10 +1,9 @@
 
-
 const Account = ()=>{
     return(
-        <div>
+            <div>
             account
-        </div>
+            </div>
     )
 }
 export default Account;

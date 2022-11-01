@@ -1,0 +1,137 @@
+.accContent {
+    width: 848px;
+    border-left: #dfeef5 solid 1px;
+    margin-left: -1px;
+    float: left;
+
+    .trasactionHead {
+        height: 55px;
+        position: relative;
+        background-color: #f9fcfd;
+        border-bottom: 1px solid #dfeef5;
+
+        a {
+            .backtoTrans {
+                display: inline-block;
+                padding-left: 20px;
+                background-image: url(../../../images/arrow-left-blue.svg);
+                background-repeat: no-repeat;
+                background-position: left 2px;
+                font-size: 12px;
+                margin: 20px 0 0 30px;
+                font-weight: 600;
+                color: #1f6dd1;
+                text-decoration: none;
+            }
+        }
+
+        .updateNowBtn {
+            position: absolute;
+            right: 30px;
+            top: 18px;
+        }
+    }
+
+    .tabContainer {
+        padding: 25px 30px;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #001837;
+            margin-bottom: 30px;
+        }
+
+        .singleTransTable {
+            table {
+                width: 100%;
+                margin-bottom: -1px;
+                table-layout: auto;
+                border: #dfeef5 solid 1px;
+
+                .singleTransDetRow {
+                    td {
+                        padding: 15px 20px;
+                        background-color: #f9fcfd;
+
+                        strong {
+                            font-weight: 600;
+                            color: #001837;
+                        }
+                    }
+
+                    span.rowTitle {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #5c6b7e;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .transHelpNote {
+                    td {
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #96a9bb;
+                        padding: 15px 20px;
+                    }
+
+                    a {
+                        color: #001837;
+                        text-decoration: none;
+                    }
+                }
+
+                tr {
+                    .text-right {
+                        text-align: right;
+                    }
+
+                    td {
+                        border-bottom: #dfeef5 solid 1px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.29;
+                        color: #96a9bb;
+                        padding: 20px;
+
+                        .productInfo {
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: #001837;
+                        }
+
+                        a.secondary_btn_red {
+                            border-radius: 15px;
+                            -moz-border-radius: 15px;
+                            -webkit-border-radius: 15px;
+                            
+                        }
+                        
+                        
+
+                        span.rowTitle {
+                            font-size: 12px;
+                            font-weight: 600;
+                            color: #5c6b7e;
+                            text-transform: uppercase;
+                        }
+                    }
+                    
+
+                    th {
+                        background-color: #f1f8fa;
+                        border-bottom: #dfeef5 solid 1px;
+                        font-size: 13px;
+                        font-weight: 600;
+                        color: #5c6b7e;
+                        text-transform: uppercase;
+                        padding: 15px 0 15px 20px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+    }
+}

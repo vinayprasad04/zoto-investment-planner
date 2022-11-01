@@ -9,6 +9,7 @@ import Counter from './pages/counter';
 import Planner from './pages/planner/planner';
 import StockPlanner from './pages/planner/stockPlanner';
 import Account from './pages/Account';
+import Transiction from './pages/Transiction';
 
 
 function WebRoot() {
@@ -23,7 +24,9 @@ function WebRoot() {
                     <Route path="/mix-planner"><Counter/></Route>
                     <Route path="/home"><Home/></Route>
                     
-                    <Route path="/account"><Account/></Route>
+                    <Route path="/account"><Account/>
+                       
+                    </Route>
                 </Switch>
         </Router>
     );
