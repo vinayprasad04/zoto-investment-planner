@@ -2,11 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Detail from "./Detail";
-import '../../../styles/common/transiction.scss'
+import "../../../styles/common/transiction.scss";
+import { tablebody, tablehead,  } from "./trans_const";
+
 
 function Tab() {
   const [tab, activetab] = useState(0);
   const [trans, showtrans] = useState(true);
+
+  
 
   return (
     <>
@@ -43,45 +47,30 @@ function Tab() {
                 <table>
                   <tbody>
                     <tr>
-                      <th width="15%">DATE</th>
-                      <th width="15%">ORDER ID</th>
-                      <th width="30%">ITEMS</th>
-                      <th width="20%">STATUS</th>
-                      <th width="10%">&nbsp;</th>
+                        {tablehead.map(head => <th width="20%">{head}</th>)}
                     </tr>
-                    <tr>
-                      <td>13/07/ 2016</td>
-                      <td>6922400</td>
-                      <td>
-                        <strong>DSP BlackRock World Gold Fund</strong>
-                      </td>
-                      <td>Payment Recieved</td>
-                      <td>
-                        <Link to='#'onClick={() => showtrans(false)}>Details</Link>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>13/07/ 2016</td>
-                      <td>6922400</td>
-                      <td>
-                        <strong>2 Items</strong>
-                      </td>
-                      <td>Verifying Documents</td>
-                      <td>
-                      <Link to='#'onClick={() => showtrans(false)}>Details</Link>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>13/07/ 2016</td>
-                      <td>6922400</td>
-                      <td>
-                        <strong>Retirement Goal</strong>
-                      </td>
-                      <td>Cancelled</td>
-                      <td>
-                      <Link to='#'onClick={() => showtrans(false)}>Details</Link>
-                      </td>
-                    </tr>
+                    {
+                    tablebody.map((val) => {
+                      return <>
+                      
+                        <tr>
+                          <td>{val.date} </td>
+
+                           <td>{val.ORDER_ID}</td>
+                          <td>
+                            <strong>{val.ITEMS}</strong>
+                          </td>
+                          <td>{val.STATUS}</td>
+                          <td>
+                            <Link to="#" onClick={() => showtrans(false)}>
+                              Details
+                            </Link>
+                          </td>
+                        </tr>
+                        </>
+                      
+                    })}
+                    
                   </tbody>
                 </table>
               </div>
