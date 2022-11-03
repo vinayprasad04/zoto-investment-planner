@@ -1,11 +1,18 @@
-import {React} from 'react';
-import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import { React, useState } from 'react';
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Login } from './Login';
+import "../../../styles/common/login.scss"
 
-const Header =()=>{
-    return(
-        <Navbar collapseOnSelect expand="lg">
-            <Container>
+
+
+const Header = () => {
+    const [state, setState] = useState({ loginTogal: false })
+    
+    return (
+        <>
+            <Navbar className='navbar' collapseOnSelect expand="lg">
+                {/* <Container>
                 <Navbar.Brand href="/">Zoto Investing </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -33,8 +40,15 @@ const Header =()=>{
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
-        </Navbar>
+            </Container> */}
+                <div>
+                    <a onClick={()=>{
+                        setState({...state,loginTogal:!state.loginTogal})
+                    }}>login</a>
+                </div>
+                {state.loginTogal && <Login setState={setState} />}
+            </Navbar>
+        </>
     )
 }
 
