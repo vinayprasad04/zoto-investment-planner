@@ -1,14 +1,19 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Login } from './Login';
 import "../../../styles/common/login.scss"
+import { useSelector } from 'react-redux';
 
 
 
 const Header = () => {
     const [state, setState] = useState({ loginTogal: false })
+    const { pageAuth } = useSelector(store => store.authReducer)
+    const navigate = useNavigate()
     
+
+
     return (
         <>
             <Navbar className='navbar' collapseOnSelect expand="lg">
@@ -42,8 +47,8 @@ const Header = () => {
                 </Navbar.Collapse>
             </Container> */}
                 <div>
-                    <a onClick={()=>{
-                        setState({...state,loginTogal:!state.loginTogal})
+                    <a onClick={() => {
+                        setState({ ...state, loginTogal: !state.loginTogal })
                     }}>login</a>
                 </div>
                 {state.loginTogal && <Login setState={setState} />}

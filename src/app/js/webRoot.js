@@ -26,7 +26,7 @@ function WebRoot() {
                 <Route path="/stock-planner" element={<StockPlanner />} />
                 <Route path="/mutual-fund-planner" element={<Counter />} />
                 <Route path="/mix-planner" element={<Counter />} />
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Home />} />
 
                 <Route exact path="/account" element={<Account />}>
                     <Route exact path="/account/overview" element={<Overview />} />
