@@ -1,22 +1,16 @@
 import { React } from 'react';
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+// import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 // import { Link } from "react-router-dom";
-import './navbar.css'
+import '../../../styles/navbar.scss'
 import logo from '../../../../images/logo.png'
 import relaManger from '../../../../images/relaManger.png'
 import clearNoIcon from '../../../../images/clearNoIcon.png'
 
 const Header = () => {
-
+    
     return (
         <div className="headerContainer">
-            <header
-                className="header
-      
-
-                
-      "
-            >
+            <header className="header">
                 <div className="container group">
                     <div className="logo">
                         <a href="javascript:void(0);">
@@ -48,11 +42,11 @@ const Header = () => {
                         <div className="headInbox">
                             <a href="javascript:void(0);" className="headInboxBtn">
                                 {" "}
-                                <span>2</span>
+                                <span>12</span>
                             </a>
                             <div className="cartPreviewBox inboxPreviewBox">
                                 <div className="cartTopArrow" />
-                                <h3>2 UNREAD</h3>
+                                <h3>4 UNREAD</h3>
                                 <article className="group">
                                     <div className="inboxUserpic">
                                         <img src={relaManger} />
@@ -64,7 +58,7 @@ const Header = () => {
                                             Hi there thanks for sending request for your Investment. If
                                             you are considering to final…
                                         </em>
-                                        <br />
+                                        <br /> 
                                         Yesterday, 09:43pm
                                     </div>
                                 </article>
@@ -127,7 +121,7 @@ const Header = () => {
                                 {" "}
                                 <span>2</span>
                             </a>
-                            <div className="cartPreviewBox">
+                            {/* <div className="cartPreviewBox">
                                 <div className="cartTopArrow" />
                                 <h3>2 Products in your Cart</h3>
                                 <article>
@@ -143,15 +137,17 @@ const Header = () => {
                                 <div className="veiwCartBtn">
                                     <a href="javascript:void(0);">View Cart</a>
                                 </div>
-                            </div>
+                            </div> */}
                             {/*//cartPreviewBox*/}
-                            <div className="cartNotificationBox">
+                            <div className="cartPreviewBox">
                                 <div className="cartTopArrow" />
                                 <article>
                                     <p>
                                         Kotak World Gold Standard fund has been added to your cart.{" "}
                                     </p>
+                                    <div className="veiwCartBtn">
                                     <a href="javascript:void(0);">View Cart</a>
+                                    </div>
                                 </article>
                             </div>
                             {/*//cartPreviewBox*/}
@@ -171,12 +167,8 @@ const Header = () => {
                                         <a href="javascript:void(0);">ACCOUNT SETTINGS</a>
                                     </li>
                                     <li>
-                                        <a
-                                            href="${pageContext.request.contextPath}/logout"
-                                            id="lgt_loginBtn"
-                                        >
-                                            Logout
-                                        </a>
+                                        {/* <a href="${pageContext.request.contextPath}/logout"id="lgt_loginBtn">Logout </a> */}
+                                        <a href="javascript:void(0);">Logout</a>
                                     </li>
                                 </ul>
                             </div>
@@ -195,3 +187,7 @@ const Header = () => {
 }
 
 export default Header;
+
+
+
+
