@@ -22,6 +22,20 @@ export const signup = createAsyncThunk('signup', async ({ name, email, password,
     return payload
 })
 
+export const accountRefresh=createAsyncThunk('accountRefresh',async ()=>{
+    let payload = null;
+    await axios.get(`http://localhost:4000/zoto-investment-planner/api/v1/account`, {
+        headers:{
+            token:localStorage.getItem('token')
+        }
+    }).then((res) => {
+        payload = res
+    }).catch((err) => {
+        payload = err.response
+    })
+    return payload
+})
+
 
 
 const initialState = {
@@ -46,6 +60,7 @@ const slice = createSlice({
             if (action.payload.status === 200) {
                 state.pageAuth = true
                 state.ResponceStatus = action.payload.data.status
+                localStorage.setItem('token',action.payload.data.token)
             } else {
                 state.pageAuth = false
                 state.ResponceStatus = action.payload.data.message
@@ -61,11 +76,25 @@ const slice = createSlice({
             if (action.payload.status === 200) {
                 state.pageAuth = true
                 state.ResponceStatus = action.payload.data.status
+                localStorage.setItem('token',action.payload.data.token)
             } else {
                 state.pageAuth = false
-                state.ResponceStatus = action.payload.data.message
+                const mess=action.payload.data.message.split(':')
+                state.ResponceStatus = mess.length>1?mess[2] : mess[0]
             }
-        }
+        },
+
+
+        [accountRefresh.pending]:(state, action) => {
+            state.pageAuth = false
+        },
+        [accountRefresh.fulfilled]: (state, action) => {
+            if (action.payload.status === 200) {
+                state.pageAuth = true
+            } else {
+                state.pageAuth = false
+            }
+        },
 
     }
 })

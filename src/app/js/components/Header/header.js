@@ -50,6 +50,7 @@ const Header = () => {
                     <a onClick={() => {
                         setState({ ...state, loginTogal: !state.loginTogal })
                     }}>login</a>
+                    <Link to={'/account'}>account</Link>
                 </div>
                 {state.loginTogal && <Login setState={setState} />}
             </Navbar>

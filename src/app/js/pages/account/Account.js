@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 const Account = () => {
 
     const { pageAuth } = useSelector(store => store.authReducer)
+    console.log(pageAuth)
     const navigate=useNavigate()
     useEffect(()=>{
         if(!pageAuth){
