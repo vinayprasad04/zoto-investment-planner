@@ -39,7 +39,7 @@ export const accountRefresh=createAsyncThunk('accountRefresh',async ()=>{
 
 
 const initialState = {
-    pageAuth: false,
+    pageAuth: true,
     userDetail: {},
     ResponceStatus: null
 }

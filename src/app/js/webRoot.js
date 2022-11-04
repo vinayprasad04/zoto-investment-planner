@@ -23,9 +23,9 @@ function WebRoot() {
 
     const dispatch=useDispatch()
 
-    useEffect(()=>{
-        dispatch(accountRefresh())
-    },[])
+    // useEffect(()=>{
+    //     dispatch(accountRefresh())
+    // },[])
 
     return (
         <Router>
