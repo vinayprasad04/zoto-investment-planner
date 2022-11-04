@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>CE803B73-702D-46FD-B03E-CB9DE3D85054</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <ellipse id="path-1" cx="24" cy="24" rx="24" ry="24"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="48" height="48" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Colors-edited" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3-B-Post-Checkout" transform="translate(-161.000000, -244.000000)" stroke="#37E66A">
+            <g id="Group-9" transform="translate(120.000000, 144.000000)">
+                <g id="done" transform="translate(41.000000, 100.000000)">
+                    <g id="Checkbox-Circle">
+                        <use id="Oval-41-Copy-3" mask="url(#mask-2)" stroke-width="4" fill="#FFFFFF" transform="translate(24.000000, 24.000000) rotate(-180.000000) translate(-24.000000, -24.000000) " xlink:href="#path-1"></use>
+                        <polyline id="Path-249" stroke-width="2" points="13.8947368 25.2043551 20.1498942 31.4595125 35.1883541 16.4210526"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
