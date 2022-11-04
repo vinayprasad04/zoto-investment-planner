@@ -21,7 +21,7 @@ export const Login = (props) => {
             }, 4000)
         }
     }
-console.log(pageAuth)
+    console.log(state.signUpTogal)
     useEffect(() => {
         if (pageAuth) {
             setTimeout(() => {
