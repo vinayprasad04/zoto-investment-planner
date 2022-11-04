@@ -8,7 +8,7 @@ import Alert from '@mui/material/Alert';
 
 export const Login = (props) => {
 
-    const [state, setState] = useState({ name: '', email: '', password: '', rePassword: '', popUpToggle: false, wait: false, signUpTogal: false })
+    const [state, setState] = useState({ name: '', email: '', password: '', rePassword: '', popUpToggle: false, wait: false, signUpTogal: false, forgetpassword: false })
     const dispatch = useDispatch()
     const { pageAuth, ResponceStatus } = useSelector(store => store.authReducer)
     const navigate = useNavigate()
@@ -21,7 +21,7 @@ export const Login = (props) => {
             }, 4000)
         }
     }
-
+console.log(pageAuth)
     useEffect(() => {
         if (pageAuth) {
             setTimeout(() => {
@@ -48,33 +48,46 @@ export const Login = (props) => {
                                 }} />
                             </div>
                             <h2>
-                                Please {state.signUpTogal ? 'sign up' : 'login'} to continue with your account
+                                {state.forgetpassword ? `Please enter email to continue with your account` : `Please ${state.signUpTogal ? 'sign up' : 'login'} to continue with your account`}
                             </h2>
                             <div className="lgtFormField">
-                                {state.signUpTogal && <>
-                                    <label>Your name</label>
-                                    <input value={state.name} onChange={(e) => {
-                                        setState({ ...state, name: e.target.value })
-                                    }} type="text" />
-                                </>}
+                                {
+                                    state.forgetpassword ?
+                                        <>
+                                            <label>Your email</label>
+                                            <input value={state.email} onChange={(e) => {
+                                                setState({ ...state, email: e.target.value })
+                                            }} type="email" />
+                                        </>
+                                        :
+                                        <>
+                                            {state.signUpTogal && <>
+                                                <label>Your name</label>
+                                                <input value={state.name} onChange={(e) => {
+                                                    setState({ ...state, name: e.target.value })
+                                                }} type="text" />
+                                            </>}
 
 
-                                <label>Your email</label>
-                                <input value={state.email} onChange={(e) => {
-                                    setState({ ...state, email: e.target.value })
-                                }} type="email" />
+                                            <label>Your email</label>
+                                            <input value={state.email} onChange={(e) => {
+                                                setState({ ...state, email: e.target.value })
+                                            }} type="email" />
 
-                                <label>Your password</label>
-                                <input value={state.password} onChange={(e) => {
-                                    setState({ ...state, password: e.target.value })
-                                }} type="password" />
+                                            <label>Your password</label>
+                                            <input value={state.password} onChange={(e) => {
+                                                setState({ ...state, password: e.target.value })
+                                            }} type="password" />
 
-                                {state.signUpTogal && <>
-                                    <label>Re password</label>
-                                    <input value={state.rePassword} onChange={(e) => {
-                                        setState({ ...state, rePassword: e.target.value })
-                                    }} type="password" />
-                                </>}
+                                            {state.signUpTogal && <>
+                                                <label>Re password</label>
+                                                <input value={state.rePassword} onChange={(e) => {
+                                                    setState({ ...state, rePassword: e.target.value })
+                                                }} type="password" />
+                                            </>}
+                                        </>
+                                }
+
 
 
 
@@ -93,7 +106,9 @@ export const Login = (props) => {
                             </div>
                         </div>
                         <div className="lgtTermsBox">
-                            <Link>forget password</Link><Link style={{ marginLeft: '2%' }} onClick={() => {
+                            <Link onClick={() => {
+                                setState({ ...state, forgetpassword: true })
+                            }}>forget password</Link><Link style={{ marginLeft: '2%' }} onClick={() => {
                                 setState({ ...state, signUpTogal: !state.signUpTogal })
                             }} >{state.signUpTogal ? 'login' : 'sign up'}</Link>
                         </div>
