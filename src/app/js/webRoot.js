@@ -1,5 +1,5 @@
 import {React} from 'react';
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route, Routes,} from 'react-router-dom';
 //common
 import Header from './components/Header/header'
 
@@ -15,16 +15,16 @@ function WebRoot() {
     return (
         <Router>
             <Header/>
-                <Switch>
-                    <Route path="/counter"><Counter/></Route>
-                    <Route path="/planner"><Planner/></Route>
-                    <Route path="/stock-planner"><StockPlanner/></Route>
-                    <Route path="/mutual-fund-planner"><Counter/></Route>
-                    <Route path="/mix-planner"><Counter/></Route>
-                    <Route path="/home"><Home/></Route>
+                <Routes>
+                    <Route path="/counter" element={<Counter/>}/>
+                    <Route path="/planner" element={<Planner/>}/>
+                    <Route path="/stock-planner" element={<StockPlanner/>}/>
+                    <Route path="/mutual-fund-planner" element={<Counter/>}/>
+                    <Route path="/mix-planner" element={<Counter/>}/>
+                    <Route path="/home" element={<Home/>}/>
                     
-                    <Route path="/account"><Account/></Route>
-                </Switch>
+                    <Route path="/account" element={<Account/>}/>
+                </Routes>
         </Router>
     );
 }
