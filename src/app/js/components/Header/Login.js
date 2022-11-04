@@ -108,7 +108,7 @@ export const Login = (props) => {
                             <Link onClick={() => {
                                 setState({ ...state, forgetpassword: true })
                             }}>forget password</Link><Link style={{ marginLeft: '2%' }} onClick={() => {
-                                setState({ ...state, signUpTogal: !state.signUpTogal,forgetpassword: false })
+                                setState({ ...state, signUpTogal: !state.signUpTogal, forgetpassword: false })
                             }} >{state.signUpTogal ? 'login' : 'sign up'}</Link>
                         </div>
                         {state.popUpToggle && <div style={{ marginTop: '2%', paddingBottom: '3%' }}>
