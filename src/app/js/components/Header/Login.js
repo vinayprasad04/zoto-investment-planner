@@ -16,7 +16,7 @@ export const Login = ({ setState }) => {
                                 <img className='accountIcon' src={accountIcon} />
                                 <img className='cancel' src={cancel} onClick={() => {
                                     setState((e) => {
-                                        return { ...e, loginTogal: !e.loginTogal }
+                                        return { ...e, loginTogal: false }
                                     })
                                 }} />
                             </div>

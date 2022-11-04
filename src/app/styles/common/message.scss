@@ -1,0 +1,116 @@
+.commonLightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    display: none;
+    overflow-y: auto;
+
+    .lightBox_container {
+        width: 420px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        box-shadow: 0 12px 32px 0 #bac6cc;
+        // box-shadow: 0 12px 32px 0 rgb(186 198 204 / 50%);
+        // -moz-box-shadow: 0 12px 32px 0 rgba(186, 198, 204, 0.5);
+        // -webkit-box-shadow: 0 12px 32px 0 rgb(186 198 204 / 50%);
+
+
+
+    }
+
+    .msgLgt_box {
+        width: 615px;
+
+        .lgtCloseBtn {
+            position: relative;
+            z-index: 1;
+
+            a {
+                color: #1f6dd1;
+                text-decoration: none;
+
+                
+            }
+            .lightboxCloseBtn {
+                width: 12px;
+                height: 12px;
+                background-image: url(../../../images/close.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                display: block;
+                overflow: hidden;
+                text-indent: -99999999px;
+            }
+            .acc_lg_head {
+                padding: 18px 30px;
+                border-bottom: solid 1px #dfeef5;
+
+                 h2 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #001837;
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+            }
+
+            .msgHistory {
+
+                article {
+                    padding: 25px 30px;
+                    min-height: 175px;
+                    border-bottom: solid 1px #dfeef5;
+
+                    .msgUserPic {
+                        width: 42px;
+                        float: left;
+                        margin-right: 20px;
+
+                        img {
+                            width: 100%;
+                            border-radius: 100%;
+                            -moz-border-radius: 100%;
+                            -webkit-border-radius: 100%;
+                        }
+
+                    }
+                    .msgUserContent {
+                        width: 490px;
+                        float: left;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.57;
+                        color: #5c6b7e;
+
+                        h6 {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #bac7cc;
+                            margin-bottom: 5px;
+
+                            strong {
+                                color: #001837;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+                .group {
+                    zoom: 1;
+                }
+            }
+
+        }
+    }
+
+}
