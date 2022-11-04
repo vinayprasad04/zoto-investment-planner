@@ -15,8 +15,18 @@ import Profile from './pages/account/Profile'
 import CurrentHolding from './pages/account/CurrentHolding'
 import Transactions from './pages/account/Transactions'
 import Setting from './pages/account/Setting'
+import { useEffect } from 'react';
+import { accountRefresh } from '../../reducer/authReducer';
+import { useDispatch } from 'react-redux';
 
 function WebRoot() {
+
+    const dispatch=useDispatch()
+
+    useEffect(()=>{
+        dispatch(accountRefresh())
+    },[])
+
     return (
         <Router>
             <Header />
@@ -26,7 +36,7 @@ function WebRoot() {
                 <Route path="/stock-planner" element={<StockPlanner />} />
                 <Route path="/mutual-fund-planner" element={<Counter />} />
                 <Route path="/mix-planner" element={<Counter />} />
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Home />} />
 
                 <Route exact path="/account" element={<Account />}>
                     <Route exact path="/account/overview" element={<Overview />} />
