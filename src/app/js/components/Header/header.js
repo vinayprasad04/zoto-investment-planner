@@ -1,19 +1,19 @@
-import { React, useEffect, useState } from 'react';
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import { Login } from './Login';
-import "../../../styles/common/login.scss"
-import { useSelector } from 'react-redux';
-
-
+import { React, useState } from "react";
+// import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+// import { Link } from "react-router-dom";
+import "../../../styles/navbar.scss"
+import logo from "../../../../images/logo.png";
+import relaManger from "../../../../images/relaManger.png";
+import clearNoIcon from "../../../../images/clearNoIcon.png";
 
 const Header = () => {
-    const [state, setState] = useState({ loginTogal: false })
-    const { pageAuth } = useSelector(store => store.authReducer)
-    const navigate = useNavigate()
-    
-
-
+    const [toggleNotif, setToggleNoti] = useState(false)
+    const handleHandle = () => {
+        setToggleNoti(true)
+    }
+    const handleLeave = () => {
+        setToggleNoti(false)
+    }
     return (
         <>
             <Navbar className='navbar' collapseOnSelect expand="lg">
@@ -23,14 +23,9 @@ const Header = () => {
                     }}>login</a>
                     <Link to={'/account'}>account</Link>
                 </div>
-                {state.loginTogal && <Login setState={setState} />}
             </Navbar>
         </>
-    )
-}
+    );
+};
 
 export default Header;
-
-
-
-
