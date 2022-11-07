@@ -27,6 +27,7 @@ export const Login = (props) => {
                 props.setState((e) => {
                     return { ...e, loginTogal: false }
                 })
+                console.log('kaskak')
                 navigate('/account')
             }, 2000)
         }
@@ -115,39 +116,7 @@ export const Login = (props) => {
                             {ResponceStatus && ((ResponceStatus === 'login' || ResponceStatus === 'signup') ? <Alert severity="success">{ResponceStatus}!</Alert> : <Alert severity="error">{ResponceStatus}!</Alert>)}
                         </div>}
                     </section>
-                    {/* <section className="loginSlide">
-                        <div className="loginLgtContent">
-                            <div className="userLgtIcon text-center">
-                                <img src="images/account-icon.svg" />
-                            </div>
-                            <h2 className="text-center">
-                                Almost there! Please enter the OTP sent on your mobile to verify.
-                            </h2>
-                            <div className="lgtFormField">
-                                <label>Enter OTP (One Time Password)</label>
-                                <input type="text" />
-                            </div>
-                            <div className="lightboxCommonBtn">
-                                <input
-                                    type="submit"
-                                    defaultValue="VERIFY"
-                                    className="primary_btn_red"
-                                />
-                            </div>
-                        </div>
-                        <div className="lgtTermsBox group">
-                            <a
-                                href="javascript:void(0);"
-                                style={{ float: "left" }}
-                                className="resendOtp"
-                            >
-                                Resend OTP?
-                            </a>
-                            <a href="javascript:void(0);" style={{ float: "right" }}>
-                                Entered Wrong Number?
-                            </a>
-                        </div>
-                    </section> */}
+
 
                 </div>
             </div>

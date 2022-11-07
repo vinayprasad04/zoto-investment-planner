@@ -22,11 +22,11 @@ export const signup = createAsyncThunk('signup', async ({ name, email, password,
     return payload
 })
 
-export const accountRefresh=createAsyncThunk('accountRefresh',async ()=>{
+export const accountRefresh = createAsyncThunk('accountRefresh', async () => {
     let payload = null;
     await axios.get(`http://localhost:4000/zoto-investment-planner/api/v1/account`, {
-        headers:{
-            token:localStorage.getItem('token')
+        headers: {
+            token: localStorage.getItem('token')
         }
     }).then((res) => {
         payload = res
@@ -51,6 +51,10 @@ const slice = createSlice({
         reSetStatus: (state, action) => {
             state.ResponceStatus = action.payload
         },
+        logOut(state, action) {
+            localStorage.removeItem('token')
+            state.pageAuth=false
+        }
     },
     extraReducers: {
         [login.pending]: (state, action) => {
@@ -60,7 +64,7 @@ const slice = createSlice({
             if (action.payload.status === 200) {
                 state.pageAuth = true
                 state.ResponceStatus = action.payload.data.status
-                localStorage.setItem('token',action.payload.data.token)
+                localStorage.setItem('token', action.payload.data.token)
             } else {
                 state.pageAuth = false
                 state.ResponceStatus = action.payload.data.message
@@ -76,16 +80,16 @@ const slice = createSlice({
             if (action.payload.status === 200) {
                 state.pageAuth = true
                 state.ResponceStatus = action.payload.data.status
-                localStorage.setItem('token',action.payload.data.token)
+                localStorage.setItem('token', action.payload.data.token)
             } else {
                 state.pageAuth = false
-                const mess=action.payload.data.message.split(':')
-                state.ResponceStatus = mess.length>1?mess[2] : mess[0]
+                const mess = action.payload.data.message.split(':')
+                state.ResponceStatus = mess.length > 1 ? mess[2] : mess[0]
             }
         },
 
 
-        [accountRefresh.pending]:(state, action) => {
+        [accountRefresh.pending]: (state, action) => {
             state.pageAuth = false
         },
         [accountRefresh.fulfilled]: (state, action) => {
@@ -99,5 +103,5 @@ const slice = createSlice({
     }
 })
 
-export const { reSetStatus } = slice.actions
+export const { reSetStatus,logOut } = slice.actions
 export default slice.reducer
