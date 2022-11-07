@@ -1,3 +1,4 @@
+
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios';
 
@@ -37,11 +38,37 @@ export const accountRefresh = createAsyncThunk('accountRefresh', async () => {
 })
 
 
+export const ForgetPassword = createAsyncThunk('ForgetPassword', async ({ email }) => {
+    let payload = null;
+    console.log(email)
+    await axios.post(`http://localhost:4000/zoto-investment-planner/api/v1/forgetpassword`,{email}).then((res) => {
+        payload = res
+    }).catch((err) => {
+        payload = err.response
+    })
+    return payload
+})
+
+
+
+export const resetPassword = createAsyncThunk('resetPassword', async ({ email,code,newPassword,reNewPassword }) => {
+    let payload = null;
+    console.log(email)
+    await axios.post(`http://localhost:4000/zoto-investment-planner/api/v1/resetpassword`,{email,code,newPassword,reNewPassword }).then((res) => {
+        payload = res
+    }).catch((err) => {
+        payload = err.response
+    })
+    return payload
+})
+
+
 
 const initialState = {
     pageAuth: false,
     userDetail: {},
-    ResponceStatus: null
+    ResponceStatus: null,
+    emailVerify:false
 }
 
 const slice = createSlice({
@@ -51,10 +78,6 @@ const slice = createSlice({
         reSetStatus: (state, action) => {
             state.ResponceStatus = action.payload
         },
-        logOut(state, action) {
-            localStorage.removeItem('token')
-            state.pageAuth=false
-        }
     },
     extraReducers: {
         [login.pending]: (state, action) => {
@@ -100,8 +123,37 @@ const slice = createSlice({
             }
         },
 
+
+        [ForgetPassword.pending]: (state, action) => {
+            state.emailVerify = false
+        },
+        [ForgetPassword.fulfilled]: (state, action) => {
+            if (action.payload.status === 200) {
+                state.emailVerify = true
+                state.ResponceStatus = action.payload.data.message
+            } else {
+                state.emailVerify = false
+                state.ResponceStatus = action.payload.data.message
+            }
+        },
+
+
+        //resetPassword
+        [resetPassword.pending]: (state, action) => {
+            state.pageAuth = false
+        },
+        [resetPassword.fulfilled]: (state, action) => {
+            if (action.payload.status === 200) {
+                state.pageAuth = true
+                state.ResponceStatus = action.payload.data.message
+            } else {
+                state.pageAuth = false
+                state.ResponceStatus = action.payload.data.message
+            }
+        },
+
     }
 })
 
-export const { reSetStatus,logOut } = slice.actions
+export const { reSetStatus } = slice.actions
 export default slice.reducer
