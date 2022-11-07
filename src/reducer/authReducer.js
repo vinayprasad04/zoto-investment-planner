@@ -22,38 +22,13 @@ export const signup = createAsyncThunk('signup', async ({ name, email, password,
     return payload
 })
 
-export const accountRefresh = createAsyncThunk('accountRefresh', async () => {
+export const accountRefresh=createAsyncThunk('accountRefresh',async ()=>{
     let payload = null;
     await axios.get(`http://localhost:4000/zoto-investment-planner/api/v1/account`, {
-        headers: {
-            token: localStorage.getItem('token')
+        headers:{
+            token:localStorage.getItem('token')
         }
     }).then((res) => {
-        payload = res
-    }).catch((err) => {
-        payload = err.response
-    })
-    return payload
-})
-
-
-export const ForgetPassword = createAsyncThunk('ForgetPassword', async ({ email }) => {
-    let payload = null;
-    console.log(email)
-    await axios.post(`http://localhost:4000/zoto-investment-planner/api/v1/forgetpassword`,{email}).then((res) => {
-        payload = res
-    }).catch((err) => {
-        payload = err.response
-    })
-    return payload
-})
-
-
-
-export const resetPassword = createAsyncThunk('resetPassword', async ({ email,code,newPassword,reNewPassword }) => {
-    let payload = null;
-    console.log(email)
-    await axios.post(`http://localhost:4000/zoto-investment-planner/api/v1/resetpassword`,{email,code,newPassword,reNewPassword }).then((res) => {
         payload = res
     }).catch((err) => {
         payload = err.response
@@ -66,8 +41,7 @@ export const resetPassword = createAsyncThunk('resetPassword', async ({ email,co
 const initialState = {
     pageAuth: false,
     userDetail: {},
-    ResponceStatus: null,
-    emailVerify:false
+    ResponceStatus: null
 }
 
 const slice = createSlice({
@@ -86,7 +60,7 @@ const slice = createSlice({
             if (action.payload.status === 200) {
                 state.pageAuth = true
                 state.ResponceStatus = action.payload.data.status
-                localStorage.setItem('token', action.payload.data.token)
+                localStorage.setItem('token',action.payload.data.token)
             } else {
                 state.pageAuth = false
                 state.ResponceStatus = action.payload.data.message
@@ -102,16 +76,16 @@ const slice = createSlice({
             if (action.payload.status === 200) {
                 state.pageAuth = true
                 state.ResponceStatus = action.payload.data.status
-                localStorage.setItem('token', action.payload.data.token)
+                localStorage.setItem('token',action.payload.data.token)
             } else {
                 state.pageAuth = false
-                const mess = action.payload.data.message.split(':')
-                state.ResponceStatus = mess.length > 1 ? mess[2] : mess[0]
+                const mess=action.payload.data.message.split(':')
+                state.ResponceStatus = mess.length>1?mess[2] : mess[0]
             }
         },
 
 
-        [accountRefresh.pending]: (state, action) => {
+        [accountRefresh.pending]:(state, action) => {
             state.pageAuth = false
         },
         [accountRefresh.fulfilled]: (state, action) => {
@@ -119,35 +93,6 @@ const slice = createSlice({
                 state.pageAuth = true
             } else {
                 state.pageAuth = false
-            }
-        },
-
-
-        [ForgetPassword.pending]: (state, action) => {
-            state.emailVerify = false
-        },
-        [ForgetPassword.fulfilled]: (state, action) => {
-            if (action.payload.status === 200) {
-                state.emailVerify = true
-                state.ResponceStatus = action.payload.data.message
-            } else {
-                state.emailVerify = false
-                state.ResponceStatus = action.payload.data.message
-            }
-        },
-
-
-        //resetPassword
-        [resetPassword.pending]: (state, action) => {
-            state.pageAuth = false
-        },
-        [resetPassword.fulfilled]: (state, action) => {
-            if (action.payload.status === 200) {
-                state.pageAuth = true
-                state.ResponceStatus = action.payload.data.message
-            } else {
-                state.pageAuth = false
-                state.ResponceStatus = action.payload.data.message
             }
         },
 
