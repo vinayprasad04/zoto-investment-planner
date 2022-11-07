@@ -1,0 +1,740 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.headerContainer {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px 0 rgba(150, 169, 187, 0.28);
+  -moz-box-shadow: 0 1px 3px 0 rgba(150, 169, 187, 0.28);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(150, 169, 187, 0.28);
+}
+.headerContainer .header {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.headerContainer .header .logo {
+  width: 125px;
+  margin: 19px 0 0 40px;
+}
+.headerContainer .header .navigation {
+  margin: 22px 0 0 50px;
+}
+.headerContainer .header .navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.headerContainer .header .navigation ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+.headerContainer .header .navigation ul li a {
+  font-size: 16px;
+  font-weight: normal;
+  color: #96a9bb;
+  text-decoration: none;
+  border-bottom: transparent solid 2px;
+  display: inline-block;
+  padding-bottom: 22px;
+}
+.headerContainer .header .navigation ul li a:hover {
+  color: #001837;
+  border-color: #001837;
+}
+.headerContainer .header .navigation ul li a.active {
+  color: #001837;
+  border-color: #001837;
+}
+.headerContainer .nav-searchBar {
+  display: flex;
+  float: right;
+}
+.headerContainer .nav-searchBar .nav-searchBar-inner {
+  height: 66px;
+  padding-right: 20px;
+  padding-top: 17px;
+}
+.headerContainer .nav-searchBar .nav-searchBar-inner input {
+  width: 128px;
+  padding: 6px 15px;
+  background-color: #ffffff;
+  border: solid 2px #e9edf1;
+  font-size: 14px;
+  color: #96a9bb;
+  background-image: url(../../images/search.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+.headerContainer .nav-searchBar .headerRight {
+  display: flex;
+  width: 80%;
+}
+.headerContainer .nav-searchBar .headerRight .headInbox {
+  border-left: #dfeef5 solid 1px;
+  position: relative;
+}
+.headerContainer .nav-searchBar .headerRight .headInbox:hover {
+  background-color: #f6f6f6;
+}
+.headerContainer .nav-searchBar .headerRight .headInbox a.headInboxBtn {
+  width: 66px;
+  height: 66px;
+  display: block;
+  position: relative;
+  color: #fff;
+  background-image: url(../../images/inbox-topbar.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+}
+.headerContainer .nav-searchBar .headerRight .headInbox a.headInboxBtn span {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  color: #ffffff;
+  background-color: #f8342d;
+  position: absolute;
+  top: 15px;
+  right: 13px;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification {
+  border-left: #dfeef5 solid 1px;
+  position: relative;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification:hover {
+  background-color: #f6f6f6;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification a.headNotificationBtn {
+  width: 66px;
+  height: 66px;
+  display: block;
+  position: relative;
+  color: #fff;
+  background-image: url(../../images/notification-bell.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification a.headNotificationBtn span {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  color: #ffffff;
+  background-color: #f8342d;
+  position: absolute;
+  top: 15px;
+  right: 13px;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification:hover .cartPreviewBox {
+  display: block;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification .cartPreviewBox {
+  width: 322px;
+  display: none;
+  z-index: 100;
+  top: 63px;
+  right: -25px;
+  position: absolute;
+  /* display:none; */
+  background-color: #ffffff;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: 0 8px 24px 0 rgba(0, 24, 55, 0.22);
+  -moz-box-shadow: 0 8px 24px 0 rgba(0, 24, 55, 0.22);
+  -webkit-box-shadow: 0 8px 24px 0 rgba(0, 24, 55, 0.22);
+}
+.headerContainer .nav-searchBar .headerRight .headNotification .cartPreviewBox .cartTopArrow {
+  height: 1px;
+  position: relative;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification .cartPreviewBox .cartTopArrow .cartTopArrow::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  display: block;
+  top: -10px;
+  right: 52px;
+  content: "";
+  border-bottom: 10px solid #fff;
+  border-left: transparent solid 7px;
+  border-right: transparent solid 7px;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification .cartPreviewBox h3 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #001837;
+  padding: 9px 15px;
+  border-bottom: solid 1px #dfeef5;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification .cartPreviewBox article {
+  padding-left: 56px;
+  padding: 9px 15px;
+  border-bottom: solid 1px #dfeef5;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.38;
+  color: #96a9bb;
+  background-repeat: no-repeat;
+  background-position: 16px 13px;
+  min-height: 50px;
+}
+.headerContainer .nav-searchBar .headerRight .headNotification .cartPreviewBox article strong {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.38;
+  color: #001837;
+}
+.headerContainer .nav-searchBar .headerRight .headCart {
+  border-left: #dfeef5 solid 1px;
+  float: left;
+  position: relative;
+}
+.headerContainer .nav-searchBar .headerRight .headCart:hover {
+  background-color: #f6f6f6;
+}
+.headerContainer .nav-searchBar .headerRight .headCart a.headCartBtn {
+  width: 66px;
+  height: 66px;
+  display: block;
+  position: relative;
+  color: #fff;
+  background-image: url(../../images/cart-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+}
+.headerContainer .nav-searchBar .headerRight .headCart a.headCartBtn span {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  color: #ffffff;
+  background-color: #f8342d;
+  position: absolute;
+  top: 15px;
+  right: 13px;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.headerContainer .nav-searchBar .headerRight .headLogIn {
+  float: left;
+  padding: 16px;
+  width: 172px;
+  position: relative;
+  border-left: #dfeef5 solid 1px;
+}
+.headerContainer .nav-searchBar .headerRight .headLogIn a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  color: #001837;
+}
+.headerContainer .nav-searchBar .headerRight .headLogIn a .headLogIn-span {
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #1f6dd1;
+  text-transform: uppercase;
+  margin-right: 8px;
+  display: inline-block;
+  background-color: #dfedff;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+
+@media only screen and (max-width: 1180px) {
+  .headerContainer .header .navigation {
+    margin: 22px 0 0 50px;
+  }
+  .headerContainer .header .navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .headerContainer .header .navigation ul li {
+    list-style: none;
+    margin-right: 5px;
+  }
+  .headerContainer .header .navigation ul li a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #96a9bb;
+    text-decoration: none;
+    border-bottom: transparent solid 2px;
+    display: inline-block;
+    padding-bottom: 22px;
+  }
+  .headerContainer .header .navigation ul li a:hover {
+    color: #001837;
+    border-color: #001837;
+  }
+  .headerContainer .header .navigation ul li a.active {
+    color: #001837;
+    border-color: #001837;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  .headerContainer .header {
+    width: 45%;
+    justify-content: flex-start;
+  }
+  .headerContainer .header .logo {
+    width: 100px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .headerContainer .header .navigation {
+    margin-left: 10px;
+  }
+  .headerContainer .header .navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .headerContainer .header .navigation ul li {
+    list-style: none;
+    margin-right: 5px;
+  }
+  .headerContainer .header .navigation ul li a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #96a9bb;
+    text-decoration: none;
+    border-bottom: transparent solid 2px;
+    display: inline-block;
+    padding-bottom: 22px;
+  }
+  .headerContainer .header .navigation ul li a:hover {
+    color: #001837;
+    border-color: #001837;
+  }
+  .headerContainer .header .navigation ul li a.active {
+    color: #001837;
+    border-color: #001837;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .headerContainer .header {
+    width: 45%;
+    justify-content: flex-start;
+  }
+  .headerContainer .header .logo {
+    width: 100px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .headerContainer .header .navigation {
+    margin-left: 10px;
+  }
+  .headerContainer .header .navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .headerContainer .header .navigation ul li {
+    list-style: none;
+    margin-right: 5px;
+  }
+  .headerContainer .header .navigation ul li a {
+    font-size: 12px;
+    font-weight: normal;
+    color: #96a9bb;
+    text-decoration: none;
+    border-bottom: transparent solid 2px;
+    display: inline-block;
+    padding-bottom: 22px;
+  }
+  .headerContainer .header .navigation ul li a:hover {
+    color: #001837;
+    border-color: #001837;
+  }
+  .headerContainer .header .navigation ul li a.active {
+    color: #001837;
+    border-color: #001837;
+  }
+  .headerContainer .nav-searchBar {
+    display: flex;
+    float: right;
+  }
+  .headerContainer .nav-searchBar .nav-searchBar-inner {
+    height: 66px;
+    padding-right: 20px;
+    padding-top: 17px;
+  }
+  .headerContainer .nav-searchBar .nav-searchBar-inner input {
+    width: 128px;
+    padding: 6px 15px;
+    background-color: #ffffff;
+    border: solid 2px #e9edf1;
+    font-size: 14px;
+    color: #96a9bb;
+    background-image: url(../../images/search.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+  }
+  .headerContainer .nav-searchBar .headerRight {
+    width: 60%;
+  }
+  .headerContainer .nav-searchBar .headerRight .headInbox {
+    border-left: #dfeef5 solid 1px;
+  }
+  .headerContainer .nav-searchBar .headerRight .headInbox:hover {
+    background-color: #f6f6f6;
+  }
+  .headerContainer .nav-searchBar .headerRight .headInbox a.headInboxBtn {
+    width: 30px;
+    height: 66px;
+    color: #fff;
+    background-image: url(../../images/inbox-topbar.png);
+    background-repeat: no-repeat;
+    text-decoration: none;
+  }
+  .headerContainer .nav-searchBar .headerRight .headInbox a.headInboxBtn span {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #f8342d;
+    position: absolute;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+  .headerContainer .nav-searchBar .headerRight .headNotification {
+    border-left: #dfeef5 solid 1px;
+    position: relative;
+  }
+  .headerContainer .nav-searchBar .headerRight .headNotification:hover {
+    background-color: #f6f6f6;
+  }
+  .headerContainer .nav-searchBar .headerRight .headNotification a.headNotificationBtn {
+    width: 30px;
+    height: 66px;
+    display: block;
+    position: relative;
+    color: #fff;
+    background-image: url(../../images/notification-bell.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+  }
+  .headerContainer .nav-searchBar .headerRight .headNotification a.headNotificationBtn span {
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #f8342d;
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+  .headerContainer .nav-searchBar .headerRight .headCart {
+    border-left: #dfeef5 solid 1px;
+    float: left;
+    position: relative;
+  }
+  .headerContainer .nav-searchBar .headerRight .headCart:hover {
+    background-color: #f6f6f6;
+  }
+  .headerContainer .nav-searchBar .headerRight .headCart a.headCartBtn {
+    width: 30px;
+    height: 66px;
+    display: block;
+    position: relative;
+    color: #fff;
+    background-image: url(../../images/cart-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+  }
+  .headerContainer .nav-searchBar .headerRight .headCart a.headCartBtn span {
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #f8342d;
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+  .headerContainer .nav-searchBar .headerRight .headLogIn {
+    float: left;
+    padding: 10px;
+    width: 90px;
+    position: relative;
+  }
+  .headerContainer .nav-searchBar .headerRight .headLogIn a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    color: #001837;
+  }
+  .headerContainer .nav-searchBar .headerRight .headLogIn a .headLogIn-span {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #1f6dd1;
+    text-transform: uppercase;
+    margin-right: 8px;
+    display: inline-block;
+    background-color: #dfedff;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+}
+@media only screen and (max-width: 790px) {
+  .headerContainer .header {
+    width: 50%;
+  }
+  .headerContainer .header .logo {
+    width: 100px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .headerContainer .header .navigation {
+    margin-left: 10px;
+  }
+  .headerContainer .header .navigation ul {
+    display: flex;
+  }
+  .headerContainer .header .navigation ul li {
+    list-style: none;
+    margin-right: 5px;
+  }
+  .headerContainer .header .navigation ul li a {
+    font-size: 12px;
+    font-weight: normal;
+    color: #96a9bb;
+    text-decoration: none;
+    border-bottom: transparent solid 2px;
+    display: inline-block;
+    padding-bottom: 22px;
+  }
+  .headerContainer .header .navigation ul li a:hover {
+    color: #001837;
+    border-color: #001837;
+  }
+  .headerContainer .header .navigation ul li a.active {
+    color: #001837;
+    border-color: #001837;
+  }
+  .headerContainer .nav-searchBar {
+    display: flex;
+    width: 48%;
+  }
+  .headerContainer .nav-searchBar .nav-searchBar-inner {
+    height: 66px;
+    padding-right: 20px;
+    padding-top: 17px;
+  }
+  .headerContainer .nav-searchBar .nav-searchBar-inner input {
+    width: 128px;
+    padding: 6px 15px;
+    background-color: #ffffff;
+    border: solid 2px #e9edf1;
+    font-size: 14px;
+    color: #96a9bb;
+    background-image: url(../../images/search.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+  }
+  .headerContainer .nav-searchBar .headerRight {
+    width: 40%;
+  }
+  .headerContainer .nav-searchBar .headerRight .headInbox {
+    border-left: #dfeef5 solid 1px;
+  }
+  .headerContainer .nav-searchBar .headerRight .headInbox:hover {
+    background-color: #f6f6f6;
+  }
+  .headerContainer .nav-searchBar .headerRight .headInbox a.headInboxBtn {
+    width: 30px;
+    height: 66px;
+    color: #fff;
+    background-image: url(../../images/inbox-topbar.png);
+    background-repeat: no-repeat;
+    text-decoration: none;
+  }
+  .headerContainer .nav-searchBar .headerRight .headInbox a.headInboxBtn span {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #f8342d;
+    position: absolute;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+  .headerContainer .nav-searchBar .headerRight .headNotification {
+    border-left: #dfeef5 solid 1px;
+    position: relative;
+  }
+  .headerContainer .nav-searchBar .headerRight .headNotification:hover {
+    background-color: #f6f6f6;
+  }
+  .headerContainer .nav-searchBar .headerRight .headNotification a.headNotificationBtn {
+    width: 30px;
+    height: 66px;
+    display: block;
+    position: relative;
+    color: #fff;
+    background-image: url(../../images/notification-bell.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+  }
+  .headerContainer .nav-searchBar .headerRight .headNotification a.headNotificationBtn span {
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #f8342d;
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+  .headerContainer .nav-searchBar .headerRight .headCart {
+    border-left: #dfeef5 solid 1px;
+    float: left;
+    position: relative;
+  }
+  .headerContainer .nav-searchBar .headerRight .headCart:hover {
+    background-color: #f6f6f6;
+  }
+  .headerContainer .nav-searchBar .headerRight .headCart a.headCartBtn {
+    width: 30px;
+    height: 66px;
+    display: block;
+    position: relative;
+    color: #fff;
+    background-image: url(../../images/cart-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+  }
+  .headerContainer .nav-searchBar .headerRight .headCart a.headCartBtn span {
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #f8342d;
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+  .headerContainer .nav-searchBar .headerRight .headLogIn {
+    float: right;
+    width: 100%;
+    position: relative;
+  }
+  .headerContainer .nav-searchBar .headerRight .headLogIn a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    color: #001837;
+  }
+  .headerContainer .nav-searchBar .headerRight .headLogIn a .headLogIn-span {
+    width: 80px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #1f6dd1;
+    text-transform: uppercase;
+    margin-right: 8px;
+    display: inline-block;
+    background-color: #dfedff;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+  }
+}/*# sourceMappingURL=navbar.css.map */
