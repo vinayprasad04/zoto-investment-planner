@@ -78,7 +78,7 @@ const slice = createSlice({
         reSetStatus: (state, action) => {
             state.ResponceStatus = action.payload
         },
-        logOut(){
+        logOut(state,action){
             localStorage.removeItem('token')
             state.emailVerify=false
         }
