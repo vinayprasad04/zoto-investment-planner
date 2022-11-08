@@ -78,6 +78,10 @@ const slice = createSlice({
         reSetStatus: (state, action) => {
             state.ResponceStatus = action.payload
         },
+        logOut(){
+            localStorage.removeItem('token')
+            state.emailVerify=false
+        }
     },
     extraReducers: {
         [login.pending]: (state, action) => {
@@ -155,5 +159,5 @@ const slice = createSlice({
     }
 })
 
-export const { reSetStatus } = slice.actions
+export const { reSetStatus,logOut } = slice.actions
 export default slice.reducer
