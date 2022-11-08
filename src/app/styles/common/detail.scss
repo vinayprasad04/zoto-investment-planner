@@ -283,7 +283,7 @@
 }
 
 .messageLink {
-    float: left;
+    // float: left;
 
     a {
         text-decoration: none;
@@ -325,7 +325,7 @@
     .lightBox_container {
         width: 420px;
         background-color: #ffffff;
-        margin: 10rem auto;
+        margin: 10rem auto !important;
         border-radius: 8px;
         -moz-border-radius: 8px;
         -webkit-border-radius: 8px;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../../styles/common/message.scss"
+import "../../../styles/common/message.scss";
+import relaManger from "../../../../images/relaManger.png";
 
 function Message({ setState }) {
   return (
@@ -33,7 +34,7 @@ function Message({ setState }) {
         <section className="msgHistory">
           <article className="group">
             <div className="msgUserPic">
-              <img src="images/relaManger.png" />
+              <img src={relaManger} />
             </div>
             <div className="msgUserContent">
               <h6>
@@ -51,7 +52,7 @@ function Message({ setState }) {
 
           <article className="group">
             <div className="msgUserPic">
-              <img src="images/relaManger.png" />
+              <img src={relaManger} />{" "}
             </div>
             <div className="msgUserContent">
               <h6>
@@ -71,9 +72,14 @@ function Message({ setState }) {
             placeholder="Write your Reply…"
             className="textField filledInput"
           />
-          <input type="submit" value="SEND" className="primary_btn_red small_btn" />
+           <Link className="fileAttachBtn">attachement</Link>
+          <input
+            type="submit"
+            value="SEND"
+            className="primary_btn_red small_btn"
+          />
 
-          <Link className="fileAttachBtn">attachement</Link>
+         
         </div>
       </div>
     </div>
