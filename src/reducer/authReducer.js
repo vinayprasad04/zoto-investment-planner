@@ -81,6 +81,7 @@ const slice = createSlice({
         logOut(state,action){
             localStorage.removeItem('token')
             state.emailVerify=false
+            state.pageAuth=false
         }
     },
     extraReducers: {
